@@ -1,0 +1,105 @@
+/* Start Variables */
+:root {
+    /* Fonts */
+    --body-font: 'Overpass', sans-serif;
+    /* Primary Colors  */
+    --c1-color: hsl(25, 97%, 53%);
+    /* Neutral Colors  */
+    --c2-color:  hsl(217, 12%, 63%);
+    --c3-color:  hsl(216, 12%, 54%);
+    --c4-color:   hsl(213, 19%, 18%);
+    --c5-color:   hsl(216, 12%, 8%);
+
+}
+/* End Variables */
+
+/* Start Global Rules */
+*{margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+body{
+    background-color: var(--c5-color);  color: white;  font-family: var(--body-font);      
+    display: flex;  justify-content: center;  align-items: center;  min-height: 100vh;
+}
+.container{margin: 0 auto;}
+@media screen and (min-width: 410px) {.container{width: 410px;}}
+@media screen and (max-width: 409px) {.container{width: 330px;}}
+p{font-size: 15px;}
+/* End Global Rules */
+.container{
+    background-color: var(--c4-color);  padding: 30px;  border-radius: 25px;
+    height: 410px;
+}
+.rating-state .icon-box{
+    margin-bottom: 27px;  
+}
+.rating-state .icon-box img{
+    background-color: hsla(216, 12%, 54%, 0.205); padding: 13px;  border-radius: 50%;
+}
+.rating-state h3{
+    font-size: 27px;  margin-bottom: 15px;  font-weight: 700;
+}
+.rating-state p {
+    color: var(--c3-color);  margin-bottom: 30px; line-height: 1.5;
+    text-shadow: 1px 2px 4px rgba(66, 68, 90, 1);
+}
+.rating-state .ratings-box{
+    margin-bottom: 30px;  display: flex;  justify-content: space-between;  align-items: center;
+}
+.rating-state .ratings-box > span{
+    display: block; line-height: 50px;  padding-left: 21px;  border-radius: 50%;  height: 50px;  width: 50px;
+    background-color: hsla(216, 22%, 54%, 0.153);  cursor: pointer;  color: var(--c3-color);  font-weight: 700;
+    font-size: 16.5px;  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.01);
+}
+.rating-state .ratings-box > span:hover{
+    background-color: var(--c3-color);  color: white;  transition: all 0.3s;
+}
+.rating-state .ratings-box > span.active{
+    background-color: var(--c1-color);  color: white;
+}
+.rating-state button{
+    background-color: var(--c1-color);
+    border: none;
+    color: rgba(255, 255, 255, 0.87);
+    padding: 13px 28px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.3;
+    font-size: 16px;
+}
+.rating-state button:hover{
+    background-color: white;  color: var(--c1-color);  transition: all 0.3s;
+}
+.hide{display: none;}
+.submitted-state{text-align: center;}
+.submitted-state img{margin-bottom: 20px;}
+.submitted-state p.rating-selected{
+    color: var(--c1-color);  background-color: hsla(216, 22%, 54%, 0.153);  width: fit-content;
+    margin: auto;  padding: 11px 15px;  border-radius: 20px;  margin-bottom: 20px;
+}
+.submitted-state h3{font-size: 30px; margin-bottom: 20px;}
+.submitted-state p.appreciate-txt{
+color: var(--c3-color); line-height: 1.5;
+    text-shadow: 1px 2px 4px rgba(66, 68, 90, 1);
+}
+
+/* Mobile Media Rules */
+@media screen and (max-width: 1109px) {
+    .container{padding: 20px;  height: 360px;}
+    .rating-state .icon-box{
+        margin-bottom: 12.5px;  
+    }
+    .rating-state h3{margin-bottom: 12.5px;}
+    .rating-state .ratings-box{margin-bottom: 12.5px;}
+    .rating-state p {margin-bottom: 12.5px;}
+    .rating-state .ratings-box > span{
+        transform: scale(0.8);
+    }
+    .rating-state button{
+        transform: scale(0.8);
+    }
+}

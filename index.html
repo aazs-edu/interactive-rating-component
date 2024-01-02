@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Template Css File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Rating state start -->
+      <div id="ratingState" class="rating-state container">
+        <div class="icon-box">
+          <img src="images/icon-star.svg" alt="icon-star" />
+        </div>
+        <h3>How did we do?</h3>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <div class="ratings-box">
+          <span data-rating="1">1</span>
+          <span data-rating="2">2</span>
+          <span data-rating="3">3</span>
+          <span data-rating="4">4</span>
+          <span data-rating="5">5</span>
+        </div>
+        <button id="submitBtn">Submit</button>
+      </div>
+      <!-- Rating state end -->
+
+      <!-- Submitted state start -->
+      <div id="submittedState" class="submitted-state container hide">
+        <img src="images/illustration-thank-you.svg" alt="thank-you" />
+        <p class="rating-selected">You selected <span id="clientRating"></span> out of 5</p>
+        <h3>Thank you!</h3>
+        <p class="appreciate-txt">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <!-- Submitted state end -->
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
